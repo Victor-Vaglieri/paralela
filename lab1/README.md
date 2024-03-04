@@ -1,9 +1,5 @@
-compilação:
-para a compilação é necessario o GNU C compiler em dispositivos linux ou minGW para windows
-"gcc -o HW.c -o HW"
+compilação: para a compilação é necessário o GNU C compiler em dispositivos Linux ou minGW para Windows "gcc -o HW.c -o HW"
 
-execução:
-"./HW"
+execução: "./HW"
 
-o programa tem o proposito de aprender a usar os metodos do git e para ambientação na aws 
-rodando assim o basico, a impressão do "hello world"
+o programa tem o propósito de aprender a usar os métodos do git e para ambientação na aws rodando o básico, a impressão do "hello world"

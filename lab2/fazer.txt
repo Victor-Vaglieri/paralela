@@ -1,0 +1,1 @@
+precisa testar o codigo na aws de voces e precisa escrever o README falando de como compilar, executar e como provar que funciona

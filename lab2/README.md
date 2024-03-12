@@ -4,7 +4,7 @@
 
 
 - o desafio proposto foi de criar um programa de multiplicação de matriz por um vetor a qual recebesse o número de threads e devolveria os resultados em um vetor resposta, primeiro foi utilizado um programa com número definido de threads como no arquivo “lab2 com num de threads definida.c” para compreender como trabalhar com as threads e logo após foi feito o arquivo denominado “codigo-final.c” implementando os requisitos do desafio.
-Se percebe pela imagem “captura.png” que o programa apresentou as respostas corretas da multiplicação da matriz A pelo vetor X ao utilizar os números de threads 1,2,4, porém na escolha de 3 threads não houve resultado na ultima soma das multiplicações
+Se percebe pela imagem “captura.png” que o programa apresentou as respostas corretas da multiplicação da matriz A pelo vetor X. Ao utilizar os números de threads 1,2,4, porém na escolha de 3 threads não houve resultado na ultima soma das multiplicações
 
 
 ```

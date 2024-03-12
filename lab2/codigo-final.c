@@ -16,7 +16,7 @@ void *mat(void *rank)
 {
   long mrank = (long)rank; // define que a variavel de entrada da criação da thread sera seu rank/id
   printf("thread %d começou\n", mrank);
-  int parti = num_linhas / thread_count; // define qual será a partição de uma linha
+  int parti = num_linhas / thread_count; // define quantas linhas a thread vai ler
   int f_row = mrank * parti;             // define em que linha a thread começará
   int l_row = (mrank + 1) * parti - 1;   // define em que linha thread terminará
   for (int i = f_row; i <= l_row; i++)   // looping que percorre a(s) linha(s)

@@ -31,7 +31,7 @@ Nesse contexto, temos speedup crescente conforme o número de threads aumenta o 
 Conclusão 
 
 Então em ambos os casos ao usar uma matriz de 10 milhões de linhas e 10 colunas as threads calculam a multiplicação de um conjunto de linhas simultaneamente diminuindo o tempo de execução aumentando desempenho do programa (speedup), principalmente ao considerar esse número grande de dados
-![image](https://github.com/Victor-Vaglieri/paralela/assets/72163013/0202a37d-e0ea-4a54-bb6a-1b263ca34c4b)
+
 
 
 escrevi algoo

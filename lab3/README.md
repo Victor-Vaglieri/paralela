@@ -1,4 +1,4 @@
-
+escrevi algoo
 
 espicificações do processador usado em todos os testes:
 

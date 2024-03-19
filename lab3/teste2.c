@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include <pthread.h>
 
-int A[10000000][10];
+int A[10000000][10]; // matriz grande
 
-int x[10] = {1, 1, 1, 1,1,2,2,2,2,2};
-int y[10000000] = {0};
-int thread_count;
+int x[10] = {1, 1, 1, 1,1,2,2,2,2,2}; // vetor x para a multiplicação
+int y[10000000] = {0}; // valores de resposta
+int thread_count; 
 int num_linhas = 10000000, num_colunas = 10;
 void *mat(void *rank)
 {

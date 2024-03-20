@@ -34,8 +34,6 @@ Então em ambos os casos ao usar uma matriz de 10 milhões de linhas e 10 coluna
 
 
 
-escrevi algoo
-
 espicificações do processador usado em todos os testes:
 
 processor	: 0

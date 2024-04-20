@@ -1,4 +1,38 @@
-escrevi algoo
+Como compilar 
+
+•⁠  ⁠para compilar foi utilizado o comando: "gcc -g -Wall -o teste codigo-final.c -lpthread"
+
+Como executar 
+
+•⁠  ⁠para executar foi utilizado o comando: "./teste X" sendo X o numero de threads
+
+Como comprovar que os resultados foram alcançados 
+
+Para provar que os resultados propostos foram alcançados, podemos calcular manualmente o resultado esperado da multiplicação da matriz A pelo vetor x, e então comparar esse resultado com o vetor y calculado pelo programa.
+Dado que a matriz A é preenchida com os valores de 1 a 10 em cada linha, e o vetor x é {1, 1, 1, 1, 1, 2, 2, 2, 2, 2}, podemos calcular manualmente o resultado da multiplicação.
+Vamos considerar a primeira linha da matriz A e o vetor x:
+
+y[0] = A[0][0]*x[0] +…+ A[0][9]*x[9]
+         = 1*1 + 2*1 + 3*1 + 4*1 + 5*1 + 6*2 + 7*2 + 8*2 + 9*2 + 10*2
+
+         = 1 + 2 + 3 + 4 + 5 + 12 + 14 + 16 + 18 + 20
+
+         = 95
+Valor esperado para y[0]=95
+
+Relação threads x tempo execução 
+
+No código , a matriz A é grande, e cada thread é responsável por calcular a multiplicação de um conjunto de linhas dessa matriz. Ao usar mais threads, você está distribuindo a carga de trabalho de forma mais eficiente entre os núcleos de processamento disponíveis, permitindo que várias multiplicações sejam feitas em paralelo.
+
+Relação threads x speedup
+
+Nesse contexto, temos speedup crescente conforme o número de threads aumenta o que representa melhoria de desempenho . O speedup é calculado como a razão entre o tempo de execução com uma única thread e o tempo de execução com várias threads.
+
+Conclusão 
+
+Então em ambos os casos ao usar uma matriz de 10 milhões de linhas e 10 colunas as threads calculam a multiplicação de um conjunto de linhas simultaneamente diminuindo o tempo de execução aumentando desempenho do programa (speedup), principalmente ao considerar esse número grande de dados
+
+
 
 espicificações do processador usado em todos os testes:
 

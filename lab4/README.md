@@ -19,11 +19,11 @@
 ![image](https://github.com/Victor-Vaglieri/paralela/assets/127432508/3216994e-bb0f-47c6-9eea-2a3b337db59f)
 ![image](https://github.com/Victor-Vaglieri/paralela/assets/127432508/ce22a894-c7a6-43e2-b148-8b898bf525b2)
 
-   **Sem a locução diretiva, a função calc_area é chamada por várias threads simultaneamente, e cada thread atualiza a variável result independentemente, o que pode levar a problemas de concorrência.**
+   Sem a locução diretiva, a função calc_area é chamada por várias threads simultaneamente, e cada thread atualiza a variável result independentemente, o que pode levar a problemas de concorrência.
 
-   **Então, ao adicionar #pragma omp critical antes da operação que atualiza result, você está garantindo que apenas uma thread pode executar essa parte do código por vez. Isso resolve os problemas de concorrência, garantindo que apenas uma thread atualize result de cada vez, evitando resultados incorretos devido a condições de corrida**
+   Então, ao adicionar #pragma omp critical antes da operação que atualiza result, você está garantindo que apenas uma thread pode executar essa parte do código por vez. Isso resolve os problemas de concorrência, garantindo que apenas uma thread atualize result de cada vez, evitando resultados incorretos devido a condições de corrida
 
-   **Ao adicionar a diretiva critical, o código se torna mais seguro em termos de concorrência, mas pode perder um pouco em eficiência devido à contenção, já que apenas uma  thread pode executar a parte crítica do código de cada vez.**
+   Ao adicionar a diretiva critical, o código se torna mais seguro em termos de concorrência, mas pode perder um pouco em eficiência devido à contenção, já que apenas uma  thread pode executar a parte crítica do código de cada vez.
 
 
 ---

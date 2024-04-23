@@ -5,7 +5,7 @@
 + para executar foi utilizado o comando: "./exercicio1 X" sendo X o numero de threads
 ---
 ### 1. Qual o tempo de execução serial e paralelo para 1, 2, 4, 6 e 8 processadores? Desenhe um gráfico contendo todos os tempos de execução
-![image](https://github.com/Victor-Vaglieri/paralela/assets/127432508/60b2fe7d-c8f1-42e9-a4f6-3133898222f0)
+![image](https://github.com/Victor-Vaglieri/paralela/assets/127432508/188f4c49-d751-4842-a718-7fc1499d9121)
 
 ---
 ### 2. Qual o speedup para 1, 2, 4, 6 e 8 processadores? Desenhe um gráfico mostrando os diferentes valores de speedup.

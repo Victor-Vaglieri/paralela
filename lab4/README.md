@@ -14,7 +14,7 @@
 ---
 ### 3. Introduza na sua solução a diretiva critical. O que muda? Para provar seu ponto, refaça a solução com essa abordagem, calcule os novos valores e construa um novo gráfico de speedup para 1, 2, 4, 6 e 8 processadores.
 
-**falta responder a pergunta aqui**
+
 
 ![image](https://github.com/Victor-Vaglieri/paralela/assets/127432508/3216994e-bb0f-47c6-9eea-2a3b337db59f)
 ![image](https://github.com/Victor-Vaglieri/paralela/assets/127432508/ce22a894-c7a6-43e2-b148-8b898bf525b2)

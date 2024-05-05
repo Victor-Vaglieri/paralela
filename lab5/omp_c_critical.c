@@ -4,7 +4,7 @@
 
 //observações: 
 // - long double não conseque mais de 18 casas de precisão
-// - usar pthread é ruim em relação ao tempo
+// - usar pthread é muito bom em relação ao tempo
 // - omp critical garante o mesmo resultado (msm errado apos 18 casa)
 // - divisão de tarefa das trheads é complexo alem do abaixo
 

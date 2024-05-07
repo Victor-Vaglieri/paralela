@@ -8,7 +8,7 @@
 
 ![image](https://github.com/Victor-Vaglieri/paralela/assets/72163013/8f0ed8fc-8746-450e-b246-fafd59b6751c)
 
-terminal:
+### terminal:
 
 ![image](https://github.com/Victor-Vaglieri/paralela/assets/72163013/db3994ee-c41c-4929-8031-c18cd4f4f2e3)
 
@@ -43,4 +43,7 @@ terminal:
 
 
 ---
+
+
+
 

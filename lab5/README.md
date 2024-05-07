@@ -1,6 +1,9 @@
 ## Considere o problema da tartaruga envolvido no projeto final da disciplina. Desenvolva uma primeira versão serial e paralela levando em consideração os seguintes requisitos:
 
++ para compilar foi utilizado o comando: "gcc -o exercicio1 exercicio1.c -g -Wall -fopenmp -lm"
++ para executar foi utilizado o comando: "./exercicio1 X" sendo X o numero de threads
 
+---
 
 ### 1. Qual o tempo de execução serial e paralelo para 1, 2, 4, 6 e 8 processadores? Desenhe um gráfico contendo todos os tempos de execução
 
@@ -43,6 +46,16 @@
 
 
 ---
+> [!IMPORTANT]
+> processador usado: *AMD Ryzen 5 1600 six-core*
+> 
+> sistema operacional usado: *Debian GNU/Linux 12*
+
+
+
+
+
+
 
 
 

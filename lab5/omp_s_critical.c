@@ -21,7 +21,7 @@ void calc_e(long double* result) {
     for (int i = ini; i < fim; i++) {
         my_result += 1.0 / fat(i);
     }
-    #pragma omp critical
+    //#pragma omp critical
     *result += my_result;
 }
 

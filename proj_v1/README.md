@@ -47,6 +47,8 @@
 
 Com a adição da a diretiva critical garantimos que apenas uma thread execute o bloco de código dentro dela por vez. Isso resolve o problema das condições de corrida, onde várias threads tentam acessar e modificar a mesma variável simultaneamente.
 
+Sem a locução diretiva, a função é chamada por várias threads simultaneamente, e cada thread atualiza a variável result independentemente, o que pode levar a problemas de concorrência.
+
 
 
 ---

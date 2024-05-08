@@ -45,7 +45,7 @@
 ![image](https://github.com/Victor-Vaglieri/paralela/assets/72163013/4e980c7b-070e-410e-8241-fd414d90e6ab)
 
 
-A diretiva critical garante que apenas uma thread execute o bloco de código dentro dela por vez. Isso resolve o problema das condições de corrida, onde várias threads tentam acessar e modificar a mesma variável simultaneamente.
+Com a adição da a diretiva critical garantimos que apenas uma thread execute o bloco de código dentro dela por vez. Isso resolve o problema das condições de corrida, onde várias threads tentam acessar e modificar a mesma variável simultaneamente.
 
 
 

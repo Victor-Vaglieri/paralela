@@ -8,29 +8,29 @@
 
 
 ---
-##talvez pq criou versão (n feita) melhor 
+## talvez pq criou versão (n feita) melhor 
 
 
 ---
-##o que é 
+## o que é 
 
-####"mpfr_mul_ui",
+#### "mpfr_mul_ui",
 
-####"mpfr_set_ui", 
+#### "mpfr_set_ui", 
 
-####"mpfr_init2",
+#### "mpfr_init2",
 
-####"mpfr_set_d", 
+#### "mpfr_set_d", 
 
-####"mpfr_div", 
+#### "mpfr_div", 
 
-####"mpfr_add", 
+#### "mpfr_add", 
 
-####"mpfr_clear",
+#### "mpfr_clear",
 
-####"mpfr_out_str", 
+#### "mpfr_out_str", 
 
-####como esse biblioteca tanka tantas casas decimais
+#### como esse biblioteca tanka tantas casas decimais
 
 ---
 

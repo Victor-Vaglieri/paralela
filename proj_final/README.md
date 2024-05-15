@@ -1,6 +1,7 @@
 ## Considere o problema da tartaruga envolvido no projeto final da disciplina. Desenvolva uma versão paralela:
 
-+ para compilar foi utilizado o comando: "gcc -o exercicio1 exercicio1.c -g -Wall -fopenmp -lm"
++ é necessario baixar a bilbioteca a MPFR (falar com baixar)
++ para compilar foi utilizado o comando: "gcc -o teste teste1.c -g -Wall -fopenmp -lmpfr -lgmp"
 + para executar foi utilizado o comando: "./exercicio1 X" sendo X o numero de threads
 ---
 

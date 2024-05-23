@@ -5,7 +5,7 @@
 #include <gmp.h>
 
 #define ENES 8192
-#define N_CASA 1000000 //casa decimais 
+#define PRECISAO 1000000 
 
 //13021 casas corretas
 //tradução do v1 com a biblioteca mpfr
@@ -29,15 +29,15 @@ void soma(mpfr_t* result) {
     mpfr_t my_result, resu_div, um;
     
     // inicia variáveis
-    mpfr_init2(my_result, N_CASA);
+    mpfr_init2(my_result, PRECISAO);
     mpfr_set_d(my_result, 0.0, MPFR_RNDU);
-    mpfr_init2(resu_div, N_CASA);
+    mpfr_init2(resu_div, PRECISAO);
     mpfr_set_d(resu_div, 1.0, MPFR_RNDU);
-    mpfr_init2(um, N_CASA);
+    mpfr_init2(um, PRECISAO);
     mpfr_set_d(um, 1.0, MPFR_RNDU);
     mpfr_t f;
     for (int i = ini; i < fim; i++) {
-        mpfr_init2(f,N_CASA);
+        mpfr_init2(f,PRECISAO);
         fatorial(i,f);
         mpfr_div(resu_div, um, f, MPFR_RNDU);
         mpfr_add(my_result, my_result, resu_div, MPFR_RNDU);
@@ -52,7 +52,7 @@ void soma(mpfr_t* result) {
 
 int main(int argc, char* argv[]) {
     numThreads = strtol(argv[1], NULL, 10);
-    mpfr_init2(result, N_CASA);
+    mpfr_init2(result, PRECISAO);
     mpfr_set_d(result, 0.0, MPFR_RNDU);
     #pragma omp parallel num_threads(numThreads)
     soma(&result);

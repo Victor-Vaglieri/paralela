@@ -21,7 +21,8 @@
 
 (falar que para saber quantas casas decimais corretas de euler foi utilizado o codigo "verif.py" que compara o log da V1-2 com o .txt do site da nasa)
 
-(foi 301027 com X N's)
+com 229376 N's
+![image](https://github.com/Victor-Vaglieri/paralela/assets/127432508/8b4edd68-6381-447e-9bb3-213689328c82)
 
 ---
 

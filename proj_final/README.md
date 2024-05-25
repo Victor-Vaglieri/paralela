@@ -9,6 +9,12 @@
 
 ## Instalação das Bibliotecas (No Debian)
 
+#### Para instalar GMP
+> sudo apt-get install libgmp-dev
+
+#### Para instalar MPFR
+> sudo apt-get install libmpfr-dev
+
 ---
 
 ## a criação da V1-1
@@ -26,6 +32,12 @@ Na V1-2, essa abordagem foi otimizada. Agora, cada thread, na primeira iteraçã
 
 ### grafico de comparação
 ![image](https://github.com/Victor-Vaglieri/paralela/assets/127432508/8b39e28c-3c2a-45ef-8c37-9cdf8dba27dd)
+
+#### speedup da V1-1
+![image](https://github.com/Victor-Vaglieri/paralela/assets/127432508/d6cb2edd-266c-42c6-b7f6-60931fe36c39)
+
+#### speedup da V1-2
+![image](https://github.com/Victor-Vaglieri/paralela/assets/127432508/b4192208-fcbd-4dd7-8b3c-8de2ddcbd03e)
 
 ---
 
@@ -46,23 +58,23 @@ Para executar o programa em python se utiliza o comando “python3 verif.py”, 
 
 (falar o algritmo que a função usa e como esse biblioteca tanka tantas casas decimais)
 
-### como esse biblioteca tanka tantas casas decimais
+### como esse biblioteca consegue atingir tantas casas decimais
 
-### "mpfr_set_d", 
+### *mpfr_set_d*
 
-### "mpfr_init2",
+### *mpfr_init2*
 
-### "mpfr_set_ui", 
+### *mpfr_set_ui*
 
-### "mpfr_mul_ui",
+### *mpfr_mul_ui*
 
-### "mpfr_div", 
+### *mpfr_div*
 
-### "mpfr_add", 
+### *mpfr_add* 
 
-### "mpfr_clear",
+### *mpfr_clear*
 
-### "mpfr_out_str", 
+### *mpfr_out_str* 
 
 ---
 

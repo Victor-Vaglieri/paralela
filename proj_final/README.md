@@ -1,27 +1,43 @@
 ## Considere o problema da tartaruga envolvido no projeto final da disciplina. Desenvolva uma versão paralela:
 
-+ é necessario baixar a bilbioteca a MPFR (falar com baixar no Linux)
++ é necessario baixar a bilbioteca a MPFR e GMP 
 + para compilar a versão 1.1 foi utilizado o comando: "gcc -o teste V1-1.c -g -Wall -fopenmp -lmpfr -lgmp"
 + para compilar a versão 1.2 foi utilizado o comando: "gcc -o teste2 V1-2.c -g -Wall -fopenmp -lmpfr -lgmp"
 + para executar foi utilizado o comando: "./teste X" sendo X o numero de threads
+  
 ---
 
-## V1-1 (falar que o foi feita uma "tradução" da v1 para essa utilizando a biblioteca)
+## Instalação das Bibliotecas (No Debian)
 
 ---
 
-## V1-2 (pq criou versão v1-2 ela é melhor, resumindo V1-2 faz o primeiro fatorial utiliza a função recursiva o resto multiplica a ultima iteração com o proximo N)
+## a criação da V1-1
+
+a V1-1 foi construída a partir da V1 montada no diretório [proj_v1]( https://github.com/Victor-Vaglieri/paralela/tree/main/proj_v1) apenas com o objetivo de atingir mais casas decimais visto que anteriormente conseguia 18 casas, assim foi utilizado  a biblioteca MPFR pois a mesma oferece suporte a aritmética de ponto flutuante com precisão arbitrária. A MPFR permite realizar cálculos com um número muito maior de dígitos de precisão do que o tipo *long double* padrão em C, que foi utilizado na V1.
+
+---
+
+## a criação da V1-2 (pq criou versão v1-2 ela é melhor, resumindo V1-2 faz o primeiro fatorial utiliza a função recursiva o resto multiplica a ultima iteração com o proximo N)
+
+Nos testes da V1-1, percebeu-se que havia uma grande demora na execução, indicando que havia uma parte a ser melhorada. A V1-2 foi criada com o objetivo de otimizar o tempo de cálculo dos fatoriais. Na V1-1, o fatorial de N era calculado multiplicando de N até 1 em todas as iterações, o que resultava em muitas operações redundantes.
+
+Na V1-2, essa abordagem foi otimizada. Agora, cada thread, na primeira iteração do seu bloco, calcula o fatorial de N até 1 e o salva. Este valor pré-calculado é então utilizado nas iterações subsequentes para calcular o fatorial de N+1 de forma mais eficiente. Em vez de recalcular tudo do zero, a thread simplesmente multiplica o fatorial de N pelo próximo número, reduzindo significativamente o tempo de cálculo. Veja a comparação de tempo no gráfico abaixo.
 
 
 ### grafico de comparação
 ![image](https://github.com/Victor-Vaglieri/paralela/assets/127432508/8b39e28c-3c2a-45ef-8c37-9cdf8dba27dd)
 
+---
 
 ### maxima de casas decimais atingidas corretamente
 
-(falar que para saber quantas casas decimais corretas de euler foi utilizado o codigo "verif.py" que compara o log da V1-2 com o .txt do site da nasa)
 
-com 229376 N's
+Agora com o programa funcionando e um o tempo aceitável, foram feitos os testes de quantas possíveis casas decimais corretas de Euler seriam atingidas, para isso foram feitos vários testes e com o melhor teste usando 12 threads, 229376 somas (N’s) e com a precisão em bits igual a 3321930 (100000 de casas decimais)atingindo a 999998 casas decimais iguais e com o tempo igual a 24 minutos e 37,557 segundos, como visto na imagem abaixo.
+
+Para conferir o resultado foi utilizado um outro programa em python que compara a última saída do log com o arquivo texto que contém o [número de Euler]( https://apod.nasa.gov/htmltest/gifcity/e.2mil) calculado por Robert Nemiroff e verificado por Jerry Bonnell, ambos da NASA Goddard Space Flight Center.
+
+Para executar o programa em python se utiliza o comando “python3 verif.py”, mas antes se deve ter salvo o resultado da V1-2 em um arquivo log chamado *output.log* e o arquivo *comparar.txt* com o [número de Euler]( https://apod.nasa.gov/htmltest/gifcity/e.2mil) 
+
 ![image](https://github.com/Victor-Vaglieri/paralela/assets/127432508/8b4edd68-6381-447e-9bb3-213689328c82)
 
 ---
@@ -50,7 +66,7 @@ com 229376 N's
 
 ---
 
-#### Logs
+#### Logs do grafico de comparação 
 ![image](https://github.com/Victor-Vaglieri/paralela/assets/127432508/8c02ab85-1e8e-4f39-9ee2-31f708b8b579)
 ![image](https://github.com/Victor-Vaglieri/paralela/assets/127432508/afdc91b0-8f66-438e-9173-d43cff92790d)
 ![image](https://github.com/Victor-Vaglieri/paralela/assets/127432508/c3a5e16a-1bac-456f-9463-af9cc5a0b5ea)

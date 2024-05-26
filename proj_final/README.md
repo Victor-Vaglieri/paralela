@@ -56,7 +56,7 @@ Para executar o programa em python se utiliza o comando “python3 verif.py”, 
 
 ## funções utilizadas
 
-(falar o algritmo que a função usa e como esse biblioteca tanka tantas casas decimais)
+(falar o algritmo que a função usa, como esse biblioteca tanka usar casas decimais e se possivel porque a escolha da função)
 
 ### como esse biblioteca consegue atingir tantas casas decimais
 

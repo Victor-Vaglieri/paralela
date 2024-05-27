@@ -41,7 +41,7 @@ Na V1-2, essa abordagem foi otimizada. Agora, cada thread, na primeira iteraçã
 
 ---
 
-### maxima de casas decimais atingidas corretamente
+### Maximo de casas decimais atingidas corretamente
 
 
 Agora com o programa funcionando e um o tempo aceitável, foram feitos os testes de quantas possíveis casas decimais corretas de Euler seriam atingidas, para isso foram feitos vários testes e com o melhor teste usando 12 threads, 229376 somas (N’s) e com a precisão em bits igual a 3321930 (aproximadamente 1000000 de casas decimais) atingindo a 999998 casas decimais iguais e com o tempo igual a 24 minutos e 37,557 segundos, como visto na imagem abaixo e no arquivo output.log.

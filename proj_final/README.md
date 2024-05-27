@@ -56,25 +56,23 @@ Para executar o programa em python se utiliza o comando “python3 verif.py”, 
 
 ## funções utilizadas
 
-(falar o algritmo que a função usa, como esse biblioteca tanka usar casas decimais e se possivel porque a escolha da função)
+### • como esse biblioteca consegue atingir tantas casas decimais
 
-### como esse biblioteca consegue atingir tantas casas decimais
+### • *mpfr_set_d*
 
-### *mpfr_set_d*
+### • *mpfr_init2*
 
-### *mpfr_init2*
+### • *mpfr_set_ui*
 
-### *mpfr_set_ui*
+### • *mpfr_mul_ui*
 
-### *mpfr_mul_ui*
+### • *mpfr_div*
 
-### *mpfr_div*
+### • *mpfr_add* 
 
-### *mpfr_add* 
+### • *mpfr_clear*
 
-### *mpfr_clear*
-
-### *mpfr_out_str* 
+### • *mpfr_out_str* 
 
 ---
 

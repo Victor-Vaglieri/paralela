@@ -56,13 +56,19 @@ Para executar o programa em python se utiliza o comando “python3 verif.py”, 
 
 ## funções utilizadas
 
-### • como esse biblioteca consegue atingir tantas casas decimais
+(USAR A FONTE ABAIXO)
 
 ### • *mpfr_set_d*
 
+ FALTA: (tem que falar o que faz, quais os parametros e falar que o motivo que foi usado é porque precisava colocar o valor double na variavel)
+
 ### • *mpfr_init2*
 
+FALTA: (em que falar o que faz, como faz para guardar a variavel, quais os parametros e falar que o motivo que foi usado é porque precisa que a variavel tenha aquela precisão especifica)
+
 ### • *mpfr_set_ui*
+
+FALTA: (em que falar o que faz, quais os parametros e falar que o motivo que foi usado é porque precisa que a variavel comece com um valor e que o valor seria grande o suficiente para talvez uma variavel do tipo inteiro assinado)
 
 ### • *mpfr_mul_ui*
 
@@ -72,7 +78,13 @@ Para executar o programa em python se utiliza o comando “python3 verif.py”, 
 
 ### • *mpfr_clear*
 
+FALTA: (em que falar o que faz)
+
 ### • *mpfr_out_str* 
+
+FALTA: (em que falar o que faz e explicar os parametros)
+
+Fonte: [https://www.mpfr.org/algo.html](https://www.mpfr.org/algo.html)
 
 ---
 

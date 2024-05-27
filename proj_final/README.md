@@ -84,7 +84,11 @@ FALTA: (tem que falar o que faz)
 
 FALTA: (tem que falar o que faz e explicar os parametros)
 
-Fonte: [https://www.mpfr.org/algo.html](https://www.mpfr.org/algo.html)
+Fontes: 
+
++ [https://www.mpfr.org/algo.html](https://www.mpfr.org/algo.html)
++ [https://github.com/bennoleslie/mpfr/tree/master/src](https://github.com/bennoleslie/mpfr/tree/master/src)
+
 
 ---
 

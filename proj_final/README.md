@@ -134,7 +134,7 @@ No código fornecido, mpfr_init2 é usado para inicializar várias variáveis mp
 
 ---------
 
-Aqui, cada variável mpfr_t (my_result, resu_div, um, e f) é inicializada com uma precisão de PRECISAO bits.mpfr_init2 é chamado várias vezes para inicializar variáveis antes de realizar cálculos.Cada uma dessas chamadas é usada para garantir que as variáveis estejam preparadas para realizar cálculos de alta precisão com a precisão especificada por PRECISAO
+Aqui, cada variável mpfr_t (my_result, resu_div, um, e f) é inicializada com uma precisão de PRECISAO bits. A função mpfr_init2 é chamada várias vezes para inicializar variáveis antes de realizar cálculos. Cada uma dessas chamadas é usada para garantir que as variáveis estejam preparadas para realizar cálculos de alta precisão com a precisão especificada por PRECISAO.
 
 A razão para usar mpfr_init2 no código é porque é necessário garantir que cada variável mpfr_t tenha a precisão especificada. Isso é crucial para manter a exatidão e a precisão dos cálculos, especialmente em operações que envolvem números grandes e precisam de alta precisão para evitar erros de arredondamento.
 

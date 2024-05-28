@@ -163,7 +163,7 @@ Durante a operação, a função utiliza uma técnica que envolve a análise dos
 
 <img width="465" alt="Captura de Tela 2024-05-28 às 17 23 56" src="https://github.com/Victor-Vaglieri/paralela/assets/72163013/247fc4bd-c4b0-4a0d-96d0-6210977ce2ab">
 
- linha mpfr_add(*result, *result, my_result, MPFR_RNDU); soma o valor parcial calculado pela thread (my_result) ao valor acumulado atual (*result) e armazena o resultado novamente em *result. O modo de arredondamento MPFR_RNDU é usado para garantir que o resultado seja arredondado para cima.
+Aqui mpfr_add(*result, *result, my_result, MPFR_RNDU); soma o valor parcial calculado pela thread (my_result) ao valor acumulado atual (*result) e armazena o resultado novamente em *result. O modo de arredondamento MPFR_RNDU é usado para garantir que o resultado seja arredondado para cima.
 
 ### • *mpfr_add* 
 

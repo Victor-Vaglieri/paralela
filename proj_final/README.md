@@ -146,6 +146,25 @@ FALTA: (tem que falar o que faz, quais os parametros e falar que o motivo que fo
 
 ### • *mpfr_div*
 
+  é a função que é utilizada para dividir dois números de precisão arbitrária
+
+	⁠void mpfr_div(mpfr_t rop, mpfr_t op1, mpfr_t op2, mpfr_rnd_t rounding_mode);
+
+  1. mpfr_t rop: Este é o parâmetro de saída, onde o resultado da divisão será armazenado, sendo do tipo mpfr_t.
+  2. mpfr_t op1: Este é o primeiro parâmetro de entrada para a divisão (dividendo), sendo do tipo mpfr_t.
+  3. mpfr_t op2: Este é o segundo parâmetro de entrada para a divisão (divisor), sendo do tipo mpfr_t
+  4. mpfr_rnd_t rounding_mode: Este parâmetro especifica o modo de arredondamento a ser usado na operação de adição. No caso usado o MPFR_RNDU (arredondamento para cima)
+
+#### algoritmo      
+
+  A função mpfr_div divide os operandos com base na precisão necessária no resultado final, em vez da precisão dos operandos, garantindo que o arredondamento correto seja preservado durante a operação de divisão. Caso os operandos tenham uma precisão maior do que a necessária, eles são truncados para corresponder à precisão desejada. 
+Durante a operação, a função utiliza uma técnica que envolve a análise dos bits mais significativos de cada operando. Essa técnica consiste em dividir os bits mais significativos do dividendo pelo divisor, proporcionando uma boa aproximação do quociente inteiro. Isso simplifica o processo de divisão pois não precisa lidar com todos os bits do número original, o que pode simplificar o processo de divisão, especialmente para números grandes e também contribui para a precisão do resultado final.
+
+
+<img width="465" alt="Captura de Tela 2024-05-28 às 17 23 56" src="https://github.com/Victor-Vaglieri/paralela/assets/72163013/247fc4bd-c4b0-4a0d-96d0-6210977ce2ab">
+
+ linha mpfr_add(*result, *result, my_result, MPFR_RNDU); soma o valor parcial calculado pela thread (my_result) ao valor acumulado atual (*result) e armazena o resultado novamente em *result. O modo de arredondamento MPFR_RNDU é usado para garantir que o resultado seja arredondado para cima.
+
 ### • *mpfr_add* 
 
 utilizada para realizar a adição de dois números de ponto flutuante com precisão arbitrária

@@ -119,6 +119,7 @@ FALTA: (tem que falar o que faz, como faz para guardar a variavel, quais os para
 parametros
 
 x: A variável do tipo mpfr_t que será inicializada.
+
 prec: A precisão, em bits, que será atribuída à variável mpfr_t.
 
 #### exemplos no codigo

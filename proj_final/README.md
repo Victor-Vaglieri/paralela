@@ -71,11 +71,11 @@ A função mpfr_set_d é utilizada para definir o valor de uma variável do tipo
 
 #### exemplos no codigo
 
-Então função converte o valor do tipo double fornecido em op para um número de alta precisão representado pela variável mpfr_t rop, usando o modo de arredondamento especificado em rnd. Então foi necaessario utilizala para inicializar variáveis mpfr_t com valores específicos representados como double. Por exemplo:
+Então função converte o valor do tipo double fornecido em op para um número de alta precisão representado pela variável mpfr_t rop, usando o modo de arredondamento especificado em rnd. Então foi necessario utiliza-la para inicializar variáveis mpfr_t com valores específicos representados como double. Por exemplo:
 
 <img width="465" alt="image" src="https://github.com/Victor-Vaglieri/paralela/assets/72163013/1b0163ee-68d9-4047-bbf3-e1d49fc56cf0">
 
-aqui ela é inicializada a variável my_result com uma precisão de PRECISAO bits, e seu valor é definido como 0.0 (zero) com o modo de arredondamento MPFR_RNDU (arredondamento para cima).Alem  disso a  função garante que a conversão do valor double para o tipo mpfr_t seja realizada com a precisão e o arredondamento desejados, essenciais para manter a precisão nas operações subsequentes com números de alta precisão.
+aqui ela é inicializada a variável my_result com uma precisão de PRECISAO bits, e seu valor é definido como 0.0 (zero) com o modo de arredondamento MPFR_RNDU (arredondamento para cima).Alem  disso a função garante que a conversão do valor double para o tipo mpfr_t seja realizada com a precisão e o arredondamento desejados, essenciais para manter a precisão nas operações subsequentes com números de alta precisão.
 
 <img width="465" alt="image" src="https://github.com/Victor-Vaglieri/paralela/assets/72163013/4ce3a256-408b-462a-9f1d-63780768cba5">
 
@@ -101,7 +101,7 @@ A função mpfr_init2 inicializa a variável mpfr_t x com uma precisão de prec 
 
 <img width="465" alt="image" src="https://github.com/Victor-Vaglieri/paralela/assets/72163013/d83ccbfe-3027-4814-8aeb-97ec3b029489">
 
-Aqui, cada variável mpfr_t (my_result, resu_div, um, e f) é inicializada com uma precisão de PRECISAO bits. A função mpfr_init2 é chamada várias vezes para inicializar variáveis antes de realizar cálculos. Cada uma dessas chamadas é usada para garantir que as variáveis estejam preparadas para realizar cálculos de alta precisão com a precisão especificada por PRECISAO. Para guardar a variável" ela inicializa mpfr_t para uso subsequente em cálculos . A função mpfr_init2 é usada para este propósito, e ela realiza a alocação necessária para armazenar a variável 
+Aqui, cada variável mpfr_t (my_result, resu_div, um, e f) é inicializada com uma precisão de PRECISAO bits. A função mpfr_init2 é chamada várias vezes para inicializar variáveis antes de realizar cálculos. Cada uma dessas chamadas é usada para garantir que as variáveis estejam preparadas para realizar cálculos de alta precisão com a precisão especificada por PRECISAO. Para guardar a variável" ela inicializa mpfr_t para uso subsequente em cálculos. A função mpfr_init2 é usada para este propósito, e ela realiza a alocação necessária para armazenar a variável 
 
 A razão para usar mpfr_init2 no código é porque é necessário garantir que cada variável mpfr_t tenha a precisão especificada. Isso é crucial para manter a exatidão e a precisão dos cálculos, especialmente em operações que envolvem números grandes e precisam de alta precisão para evitar erros de arredondamento.
 

@@ -89,7 +89,8 @@ aqui ela é inicializada a variável my_result com uma precisão de PRECISAO bit
  #### função mpfr_set_d é chamada várias vezes para inicializar variáveis:
  
 
-![image](https://github.com/Victor-Vaglieri/paralela/assets/72163013/69e37780-326d-4189-8ff3-64d80357e263)
+<img width="465" alt="image" src="https://github.com/Victor-Vaglieri/paralela/assets/72163013/4ce3a256-408b-462a-9f1d-63780768cba5">
+
 
 
 Essas chamadas são usadas para garantir que as variáveis my_result, resu_div, um, e f sejam corretamente inicializadas com os valores 0.0 ou 1.0, prontos para as operações de alta precisão que seguirão.

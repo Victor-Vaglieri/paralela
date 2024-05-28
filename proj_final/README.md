@@ -146,11 +146,14 @@ FALTA: (tem que falar o que faz, quais os parametros e falar que o motivo que fo
 
 
 realiza a multiplicação de um número de ponto flutuante de precisão arbitrária por um inteiro sem sinal, foi utilizada para garantir que o numero do fatorial fosse atingível
-	⁠void mpfr_mul_ui(mpfr_t rop, mpfr_t op1, unsigned long int op2, mpfr_rnd_t rounding_mode);
+
+	⁠
+ void mpfr_mul_ui(mpfr_t rop, mpfr_t op1, unsigned long int op2, mpfr_rnd_t rounding_mode);
 1.⁠ ⁠mpfr_t rop: Este é o parâmetro de saída, onde o resultado da multiplicação será armazenado, sendo do tipo mpfr_t.
 2.⁠ ⁠mpfr_t op1: Este é o primeiro parâmetro de entrada para a multiplicação. É um ponteiro para uma variável do tipo mpfr_t que contém o número de ponto flutuante de precisão arbitrária a ser multiplicado.
 3.⁠ ⁠unsigned long int op2: Este é o segundo parâmetro de entrada para a multiplicação. É um inteiro sem sinal (unsigned int) que será multiplicado pelo valor contido em op1 a qual é transformado internamente no tipo mpfr_t.
-  4. mpfr_rnd_t rounding_mode: Este parâmetro especifica o modo de arredondamento a ser usado na operação de adição. No caso usado o MPFR_RNDU (arredondamento para cima)
+4. mpfr_rnd_t rounding_mode: Este parâmetro especifica o modo de arredondamento a ser usado na operação de adição. No caso usado o MPFR_RNDU (arredondamento para cima)
+
 #### algoritmo      
 A função mpfr_mul_ui multiplica um número de ponto flutuante por um inteiro não assinado. Ela aloca espaço para o resultado, multiplica cada "limb" de op1 pelo inteiro op2 usando mpn_mul_1, e armazena o resultado. Após a multiplicação, o resultado é normalizado e arredondado conforme necessário. Finalmente, o expoente do resultado é ajustado, mantendo o sinal original de op1. Essa técnica permite manipulação eficiente de números grandes, dividindo-os em partes menores e manejáveis chamadas "limbs".
 

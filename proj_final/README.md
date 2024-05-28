@@ -62,12 +62,12 @@ Para executar o programa em python se utiliza o comando “python3 verif.py”, 
 
  FALTA: (tem que falar o que faz, quais os parametros e falar que o motivo que foi usado é porque precisava colocar o valor double na variavel)
  
-A função mpfr_set_d é utilizada para definir o valor de uma variável do tipo mpfr_t a partir de um valor do tipo double então para explicar melhor 
-a aixo esta sua sintaxe
+#### A função mpfr_set_d é utilizada para definir o valor de uma variável do tipo mpfr_t a partir de um valor do tipo double então para explicar melhor a aixo esta sua sintaxe
 
-void mpfr_set_d(mpfr_t rop, double op, mpfr_rnd_t rnd);
+#### void mpfr_set_d(mpfr_t rop, double op, mpfr_rnd_t rnd);
 
 Parâmetros
+
 rop: A variável de destino do tipo mpfr_t onde o valor double será armazenado.
 op: O valor do tipo double que será atribuído à variável rop.
 rnd: O modo de arredondamento a ser usado. A biblioteca MPFR suporta diversos modos de arredondamento, como MPFR_RNDN (arredondamento para o número mais próximo), MPFR_RNDZ (arredondamento para zero), MPFR_RNDU (arredondamento para cima), e MPFR_RNDD (arredondamento para baixo).
@@ -92,8 +92,11 @@ Alem  disso a  função garante que a conversão do valor double para o tipo mpf
 
 
 mpfr_set_d(my_result, 0.0, MPFR_RNDU);
+
 mpfr_set_d(resu_div, 1.0, MPFR_RNDU);
+
 mpfr_set_d(um, 1.0, MPFR_RNDU);
+
 mpfr_set_d(f, 0.0, MPFR_RNDU);
 
 Essas chamadas são usadas para garantir que as variáveis my_result, resu_div, um, e f sejam corretamente inicializadas com os valores 0.0 ou 1.0, prontos para as operações de alta precisão que seguirão.

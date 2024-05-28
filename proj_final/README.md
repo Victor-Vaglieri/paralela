@@ -123,10 +123,7 @@ prec: A precisão, em bits, que será atribuída à variável mpfr_t.
 
 #### exemplos no codigo
 
-A função mpfr_init2 inicializa a variável mpfr_t x com uma precisão de prec bits. Isso significa que todas as operações realizadas com essa variável manterão a precisão especificada, garantindo cálculos de alta precisão.
-
-
-No código fornecido, mpfr_init2 é usado para inicializar várias variáveis mpfr_t com a precisão definida pela constante PRECISAO. Por exemplo:
+A função mpfr_init2 inicializa a variável mpfr_t x com uma precisão de prec bits. Isso significa que todas as operações realizadas com essa variável manterão a precisão especificada
 
 ---------
 
@@ -134,7 +131,7 @@ No código fornecido, mpfr_init2 é usado para inicializar várias variáveis mp
 
 ---------
 
-Aqui, cada variável mpfr_t (my_result, resu_div, um, e f) é inicializada com uma precisão de PRECISAO bits. A função mpfr_init2 é chamada várias vezes para inicializar variáveis antes de realizar cálculos. Cada uma dessas chamadas é usada para garantir que as variáveis estejam preparadas para realizar cálculos de alta precisão com a precisão especificada por PRECISAO.
+Aqui, cada variável mpfr_t (my_result, resu_div, um, e f) é inicializada com uma precisão de PRECISAO bits. A função mpfr_init2 é chamada várias vezes para inicializar variáveis antes de realizar cálculos. Cada uma dessas chamadas é usada para garantir que as variáveis estejam preparadas para realizar cálculos de alta precisão com a precisão especificada por PRECISAO. Para guardar a variável" ela inicializa mpfr_t para uso subsequente em cálculos . A função mpfr_init2 é usada para este propósito, e ela realiza a alocação necessária para armazenar a variável com a precisão especificada.
 
 A razão para usar mpfr_init2 no código é porque é necessário garantir que cada variável mpfr_t tenha a precisão especificada. Isso é crucial para manter a exatidão e a precisão dos cálculos, especialmente em operações que envolvem números grandes e precisam de alta precisão para evitar erros de arredondamento.
 

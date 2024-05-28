@@ -155,7 +155,8 @@ realiza a multiplicação de um número de ponto flutuante de precisão arbitrá
 #### algoritmo      
 A função mpfr_mul_ui multiplica um número de ponto flutuante por um inteiro não assinado. Ela aloca espaço para o resultado, multiplica cada "limb" de op1 pelo inteiro op2 usando mpn_mul_1, e armazena o resultado. Após a multiplicação, o resultado é normalizado e arredondado conforme necessário. Finalmente, o expoente do resultado é ajustado, mantendo o sinal original de op1. Essa técnica permite manipulação eficiente de números grandes, dividindo-os em partes menores e manejáveis chamadas "limbs".
 
-<img width="465" alt="image" src="https://github.com/Victor-Vaglieri/paralela/assets/72163013/515aaa33-5f62-4e68-b48a-9449a341ec21">
+<img width="465" alt="image" src="https://github.com/Victor-Vaglieri/paralela/assets/72163013/a4ed48ee-fe21-4f5a-a59f-bea632ccb2a4">
+
 
 
 

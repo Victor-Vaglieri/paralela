@@ -160,6 +160,9 @@ FALTA: (tem que falar o que faz, quais os parametros e falar que o motivo que fo
 Ele começa calculando a diferença entre os expoentes dos números, garantindo que ambos tenham o mesmo sinal. Em seguida, os números são divididos em partes, com a parte mais significativa de cada número sendo adicionada primeiro considerando a diferença de expoentes. Em seguida, é calculado o carry (vai-um) resultante da adição das partes menos significativas dos números. Esse carry é então adicionado ao resultado final, garantindo precisão e arredondamento corretos durante toda a operação. 
 Este algoritmo simplifica a adição de números de precisão arbitrária, tratando separadamente as partes mais e menos significativas, enquanto preserva o arredondamento correto.
 
+<img width="465" alt="Captura de Tela 2024-05-28 às 17 10 39" src="https://github.com/Victor-Vaglieri/paralela/assets/72163013/3e7a2b32-d1c0-483c-ab7e-d5d2387136c3">
+
+na imagem mpfr_add soma duas variáveis de alta precisão: *result, que contém o valor acumulado atual, e my_result, que é o resultado parcial calculado pela thread. O resultado da soma é armazenado em *result, utilizando o modo de arredondamento MPFR_RNDU para arredondar o resultado para cima. Esta linha assegura que cada thread possa atualizar *result
 
 
 

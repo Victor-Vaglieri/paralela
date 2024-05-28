@@ -62,7 +62,7 @@ Para executar o programa em python se utiliza o comando “python3 verif.py”, 
 
  FALTA: (tem que falar o que faz, quais os parametros e falar que o motivo que foi usado é porque precisava colocar o valor double na variavel)
  
-### A função mpfr_set_d é utilizada para definir o valor de uma variável do tipo mpfr_t a partir de um valor do tipo double então para explicar melhor a baixo esta sua sintaxe
+#### A função mpfr_set_d é utilizada para definir o valor de uma variável do tipo mpfr_t a partir de um valor do tipo double então para explicar melhor a baixo esta sua sintaxe
 
 #### void mpfr_set_d(mpfr_t rop, double op, mpfr_rnd_t rnd);
 
@@ -75,7 +75,7 @@ rop: A variável de destino do tipo mpfr_t onde o valor double será armazenado.
 rnd: O modo de arredondamento a ser usado. A biblioteca MPFR suporta diversos modos de arredondamento, como MPFR_RNDN (arredondamento para o número mais próximo), MPFR_RNDZ (arredondamento para zero), MPFR_RNDU (arredondamento para cima), e MPFR_RNDD (arredondamento para baixo).
 
 
-### exemplos no codigo
+#### exemplos no codigo
 
 Então função converte o valor do tipo double fornecido em op para um número de alta precisão representado pela variável mpfr_t rop, usando o modo de arredondamento especificado em rnd. Então foi necaessario utilizala para inicializar variáveis mpfr_t com valores específicos representados como double. Por exemplo:
 
@@ -85,7 +85,7 @@ Então função converte o valor do tipo double fornecido em op para um número 
 
  aqui ela é inicializada a variável my_result com uma precisão de PRECISAO bits, e seu valor é definido como 0.0 (zero) com o modo de arredondamento MPFR_RNDU (arredondamento para cima).Alem  disso a  função garante que a conversão do valor double para o tipo mpfr_t seja realizada com a precisão e o arredondamento desejados, essenciais para manter a precisão nas operações subsequentes com números de alta precisão.
 
- ### função mpfr_set_d é chamada várias vezes para inicializar variáveis:
+ #### função mpfr_set_d é chamada várias vezes para inicializar variáveis:
 
 #### mpfr_set_d(my_result, 0.0, MPFR_RNDU);
 

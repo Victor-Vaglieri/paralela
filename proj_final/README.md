@@ -56,86 +56,52 @@ Para executar o programa em python se utiliza o comando “python3 verif.py”, 
 
 ## funções utilizadas
 
-(USAR A FONTE ABAIXO)
-
 ### • *mpfr_set_d*
 
- FALTA: (tem que falar o que faz, quais os parametros e falar que o motivo que foi usado é porque precisava colocar o valor double na variavel)
- 
-#### A função mpfr_set_d é utilizada para definir o valor de uma variável do tipo mpfr_t a partir de um valor do tipo double então para explicar melhor a baixo esta sua sintaxe
+A função mpfr_set_d é utilizada para definir o valor de uma variável do tipo mpfr_t a partir de um valor do tipo double então para explicar melhor a baixo esta sua sintaxe
 
--------------------
-
-<img width="465" alt="image" src="https://github.com/Victor-Vaglieri/paralela/assets/72163013/78012467-c2a9-47e3-ad1d-83dc3db86765">
-
--------------------
-
+> void mpfr_set_d(mpfr_t rop, double op, mpfr_rnd_t rnd);
  Parâmetros
 
-rop: A variável de destino do tipo mpfr_t onde o valor double será armazenado.
+1. rop: A variável de destino do tipo mpfr_t onde o valor double será armazenado.
 
- op: O valor do tipo double que será atribuído à variável rop.
+2. op: O valor do tipo double que será atribuído à variável rop.
 
-rnd: O modo de arredondamento a ser usado. A biblioteca MPFR suporta diversos modos de arredondamento, como MPFR_RNDN (arredondamento para o número mais próximo), MPFR_RNDZ (arredondamento para zero), MPFR_RNDU (arredondamento para cima), e MPFR_RNDD (arredondamento para baixo).
-
+3. rnd: O modo de arredondamento a ser usado. A biblioteca MPFR suporta diversos modos de arredondamento, como MPFR_RNDN (arredondamento para o número mais próximo), MPFR_RNDZ (arredondamento para zero), MPFR_RNDU (arredondamento para cima), e MPFR_RNDD (arredondamento para baixo).
 
 #### exemplos no codigo
 
 Então função converte o valor do tipo double fornecido em op para um número de alta precisão representado pela variável mpfr_t rop, usando o modo de arredondamento especificado em rnd. Então foi necaessario utilizala para inicializar variáveis mpfr_t com valores específicos representados como double. Por exemplo:
 
---------------------
-
 <img width="465" alt="image" src="https://github.com/Victor-Vaglieri/paralela/assets/72163013/1b0163ee-68d9-4047-bbf3-e1d49fc56cf0">
-
---------------------
 
 aqui ela é inicializada a variável my_result com uma precisão de PRECISAO bits, e seu valor é definido como 0.0 (zero) com o modo de arredondamento MPFR_RNDU (arredondamento para cima).Alem  disso a  função garante que a conversão do valor double para o tipo mpfr_t seja realizada com a precisão e o arredondamento desejados, essenciais para manter a precisão nas operações subsequentes com números de alta precisão.
 
- #### função mpfr_set_d é chamada várias vezes para inicializar variáveis:
-
- ---------------------
- 
 <img width="465" alt="image" src="https://github.com/Victor-Vaglieri/paralela/assets/72163013/4ce3a256-408b-462a-9f1d-63780768cba5">
-
------------------------
 
 Essas chamadas são usadas para garantir que as variáveis my_result, resu_div, um, e f sejam corretamente inicializadas com os valores 0.0 ou 1.0, prontos para as operações de alta precisão que seguirão.
 
-
- 
-
 ### • *mpfr_init2*
 
-FALTA: (tem que falar o que faz, como faz para guardar a variavel, quais os parametros e falar que o motivo que foi usado é porque precisa que a variavel tenha aquela precisão especifica)
+A função mpfr_init2 é usada para inicializar uma variável do tipo mpfr_t com uma precisão específica a baixo a sintaxe 
 
-#### A função mpfr_init2 é usada para inicializar uma variável do tipo mpfr_t com uma precisão específica a baixo a sintaxe 
-
--------------
-
-<img width="465" alt="Captura de Tela 2024-05-27 às 22 49 33" src="https://github.com/Victor-Vaglieri/paralela/assets/72163013/2024d4cc-c215-4ea2-beea-309bf1a4c230">
-
---------------
+> void mpfr_init2(mpfr_t x, mpfr_prec_t prec);
 
 parametros
 
-x: A variável do tipo mpfr_t que será inicializada.
+1. x: A variável do tipo mpfr_t que será inicializada.
 
-prec: A precisão, em bits, que será atribuída à variável mpfr_t.
+2. prec: A precisão, em bits, que será atribuída à variável mpfr_t.
 
 #### exemplos no codigo
 
 A função mpfr_init2 inicializa a variável mpfr_t x com uma precisão de prec bits. Isso significa que todas as operações realizadas com essa variável manterão a precisão especificada
 
----------
-
 <img width="465" alt="image" src="https://github.com/Victor-Vaglieri/paralela/assets/72163013/d83ccbfe-3027-4814-8aeb-97ec3b029489">
-
----------
 
 Aqui, cada variável mpfr_t (my_result, resu_div, um, e f) é inicializada com uma precisão de PRECISAO bits. A função mpfr_init2 é chamada várias vezes para inicializar variáveis antes de realizar cálculos. Cada uma dessas chamadas é usada para garantir que as variáveis estejam preparadas para realizar cálculos de alta precisão com a precisão especificada por PRECISAO. Para guardar a variável" ela inicializa mpfr_t para uso subsequente em cálculos . A função mpfr_init2 é usada para este propósito, e ela realiza a alocação necessária para armazenar a variável 
 
 A razão para usar mpfr_init2 no código é porque é necessário garantir que cada variável mpfr_t tenha a precisão especificada. Isso é crucial para manter a exatidão e a precisão dos cálculos, especialmente em operações que envolvem números grandes e precisam de alta precisão para evitar erros de arredondamento.
-
 
 
 ### • *mpfr_set_ui*
@@ -163,15 +129,11 @@ A função mpfr_mul_ui multiplica um número de ponto flutuante por um inteiro n
 
 A linha mpfr_mul_ui(f, f, i, MPFR_RNDU); multiplica a variável de alta precisão f pelo inteiro i, armazenando o resultado de volta em f. A operação usa o modo de arredondamento MPFR_RNDU para garantir que o resultado seja arredondado para cima.
 
-
-
-
-
 ### • *mpfr_div*
 
   é a função que é utilizada para dividir dois números de precisão arbitrária
 
-	⁠void mpfr_div(mpfr_t rop, mpfr_t op1, mpfr_t op2, mpfr_rnd_t rounding_mode);
+> ⁠⁠void mpfr_div(mpfr_t rop, mpfr_t op1, mpfr_t op2, mpfr_rnd_t rounding_mode);
 
   1. mpfr_t rop: Este é o parâmetro de saída, onde o resultado da divisão será armazenado, sendo do tipo mpfr_t.
   2. mpfr_t op1: Este é o primeiro parâmetro de entrada para a divisão (dividendo), sendo do tipo mpfr_t.
@@ -192,7 +154,8 @@ Aqui mpfr_add(*result, *result, my_result, MPFR_RNDU); soma o valor parcial calc
 
 utilizada para realizar a adição de dois números de ponto flutuante com precisão arbitrária
 
-	⁠void mpfr_add(mpfr_t rop, mpfr_t op1, mpfr_t op2, mpfr_rnd_t rounding_mode);
+> ⁠void mpfr_add(mpfr_t rop, mpfr_t op1, mpfr_t op2, mpfr_rnd_t rounding_mode);
+
 1.⁠ ⁠mpfr_t rop: Este é o parâmetro de saída, onde o resultado da adição será armazenado, sendo do tipo mpfr_t.
 2.⁠ ⁠mpfr_t op1: Este é o primeiro parâmetro de entrada para a adição, sendo do tipo mpfr_t
 3.⁠ ⁠mpfr_t op2: Este é o segundo parâmetro de entrada para a adição, sendo do tipo mpfr_t
@@ -206,7 +169,6 @@ Este algoritmo simplifica a adição de números de precisão arbitrária, trata
 <img width="465" alt="Captura de Tela 2024-05-28 às 17 10 39" src="https://github.com/Victor-Vaglieri/paralela/assets/72163013/3e7a2b32-d1c0-483c-ab7e-d5d2387136c3">
 
 na imagem mpfr_add soma duas variáveis de alta precisão: *result, que contém o valor acumulado atual, e my_result, que é o resultado parcial calculado pela thread. O resultado da soma é armazenado em *result, utilizando o modo de arredondamento MPFR_RNDU para arredondar o resultado para cima. Esta linha assegura que cada thread possa atualizar *result mais precisamente
-
 
 
 ### • *mpfr_clear*

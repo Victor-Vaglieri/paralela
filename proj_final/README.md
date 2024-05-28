@@ -77,13 +77,13 @@ rnd: O modo de arredondamento a ser usado. A biblioteca MPFR suporta diversos mo
 
 #### Então função converte o valor do tipo double fornecido em op para um número de alta precisão representado pela variável mpfr_t rop, usando o modo de arredondamento especificado em rnd. Então foi necaessario utilizala para inicializar variáveis mpfr_t com valores específicos representados como double. Por exemplo:
 
-##### mpfr_init2(my_result, PRECISAO);
+ mpfr_init2(my_result, PRECISAO);
 
-##### mpfr_set_d(my_result, 0.0, MPFR_RNDU);
+ mpfr_set_d(my_result, 0.0, MPFR_RNDU);
 
-#### por exemplo aqui ela é inicializada a variável my_result com uma precisão de PRECISAO bits, e seu valor é definido como 0.0 (zero) com o modo de arredondamento MPFR_RNDU (arredondamento para cima).Alem  disso a  função garante que a conversão do valor double para o tipo mpfr_t seja realizada com a precisão e o arredondamento desejados, essenciais para manter a precisão nas operações subsequentes com números de alta precisão.
+ aqui ela é inicializada a variável my_result com uma precisão de PRECISAO bits, e seu valor é definido como 0.0 (zero) com o modo de arredondamento MPFR_RNDU (arredondamento para cima).Alem  disso a  função garante que a conversão do valor double para o tipo mpfr_t seja realizada com a precisão e o arredondamento desejados, essenciais para manter a precisão nas operações subsequentes com números de alta precisão.
 
- função mpfr_set_d é chamada várias vezes para inicializar variáveis:
+ #### função mpfr_set_d é chamada várias vezes para inicializar variáveis:
 
 mpfr_set_d(my_result, 0.0, MPFR_RNDU);
 

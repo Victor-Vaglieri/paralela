@@ -143,11 +143,9 @@ A razão para usar mpfr_init2 no código é porque é necessário garantir que c
 FALTA: (tem que falar o que faz, quais os parametros e falar que o motivo que foi usado é porque precisa que a variavel comece com um valor e que o valor seria grande o suficiente para talvez uma variavel do tipo inteiro assinado)
 
 ### • *mpfr_mul_ui*
-
-
 realiza a multiplicação de um número de ponto flutuante de precisão arbitrária por um inteiro sem sinal, foi utilizada para garantir que o numero do fatorial fosse atingível
-⁠
-	void mpfr_mul_ui(mpfr_t rop, mpfr_t op1, unsigned long int op2, mpfr_rnd_t rounding_mode);
+
+	⁠void mpfr_mul_ui(mpfr_t rop, mpfr_t op1, unsigned long int op2, mpfr_rnd_t rounding_mode);
 
 1.⁠ ⁠mpfr_t rop: Este é o parâmetro de saída, onde o resultado da multiplicação será armazenado, sendo do tipo mpfr_t.
 2.⁠ ⁠mpfr_t op1: Este é o primeiro parâmetro de entrada para a multiplicação. É um ponteiro para uma variável do tipo mpfr_t que contém o número de ponto flutuante de precisão arbitrária a ser multiplicado.

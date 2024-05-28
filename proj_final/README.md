@@ -148,7 +148,8 @@ FALTA: (tem que falar o que faz, quais os parametros e falar que o motivo que fo
 
 ### • *mpfr_add* 
 
-	utilizada para realizar a adição de dois números de ponto flutuante com precisão arbitrária
+utilizada para realizar a adição de dois números de ponto flutuante com precisão arbitrária
+
 	⁠void mpfr_add(mpfr_t rop, mpfr_t op1, mpfr_t op2, mpfr_rnd_t rounding_mode);
 1.⁠ ⁠mpfr_t rop: Este é o parâmetro de saída, onde o resultado da adição será armazenado, sendo do tipo mpfr_t.
 2.⁠ ⁠mpfr_t op1: Este é o primeiro parâmetro de entrada para a adição, sendo do tipo mpfr_t

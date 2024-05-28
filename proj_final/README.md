@@ -83,17 +83,14 @@ Então função converte o valor do tipo double fornecido em op para um número 
 <img width="400" alt="image" src="https://github.com/Victor-Vaglieri/paralela/assets/72163013/1b0163ee-68d9-4047-bbf3-e1d49fc56cf0">
 
 
- aqui ela é inicializada a variável my_result com uma precisão de PRECISAO bits, e seu valor é definido como 0.0 (zero) com o modo de arredondamento MPFR_RNDU (arredondamento para cima).Alem  disso a  função garante que a conversão do valor double para o tipo mpfr_t seja realizada com a precisão e o arredondamento desejados, essenciais para manter a precisão nas operações subsequentes com números de alta precisão.
+
+aqui ela é inicializada a variável my_result com uma precisão de PRECISAO bits, e seu valor é definido como 0.0 (zero) com o modo de arredondamento MPFR_RNDU (arredondamento para cima).Alem  disso a  função garante que a conversão do valor double para o tipo mpfr_t seja realizada com a precisão e o arredondamento desejados, essenciais para manter a precisão nas operações subsequentes com números de alta precisão.
 
  #### função mpfr_set_d é chamada várias vezes para inicializar variáveis:
+ 
 
-#### mpfr_set_d(my_result, 0.0, MPFR_RNDU);
+![image](https://github.com/Victor-Vaglieri/paralela/assets/72163013/69e37780-326d-4189-8ff3-64d80357e263)
 
-#### mpfr_set_d(resu_div, 1.0, MPFR_RNDU);
-
-#### mpfr_set_d(um, 1.0, MPFR_RNDU);
-
-#### mpfr_set_d(f, 0.0, MPFR_RNDU);
 
 Essas chamadas são usadas para garantir que as variáveis my_result, resu_div, um, e f sejam corretamente inicializadas com os valores 0.0 ou 1.0, prontos para as operações de alta precisão que seguirão.
 

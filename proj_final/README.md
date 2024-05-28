@@ -64,7 +64,8 @@ Para executar o programa em python se utiliza o comando “python3 verif.py”, 
  
 #### A função mpfr_set_d é utilizada para definir o valor de uma variável do tipo mpfr_t a partir de um valor do tipo double então para explicar melhor a baixo esta sua sintaxe
 
-#### void mpfr_set_d(mpfr_t rop, double op, mpfr_rnd_t rnd);
+<img width="465" alt="image" src="https://github.com/Victor-Vaglieri/paralela/assets/72163013/78012467-c2a9-47e3-ad1d-83dc3db86765">
+
 
  Parâmetros
 

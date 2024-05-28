@@ -81,6 +81,8 @@ aqui ela é inicializada a variável my_result com uma precisão de PRECISAO bit
 
 Essas chamadas são usadas para garantir que as variáveis my_result, resu_div, um, e f sejam corretamente inicializadas com os valores 0.0 ou 1.0, prontos para as operações de alta precisão que seguirão.
 
+---
+
 ### • *mpfr_init2*
 
 A função mpfr_init2 é usada para inicializar uma variável do tipo mpfr_t com uma precisão específica a baixo a sintaxe 
@@ -103,10 +105,13 @@ Aqui, cada variável mpfr_t (my_result, resu_div, um, e f) é inicializada com u
 
 A razão para usar mpfr_init2 no código é porque é necessário garantir que cada variável mpfr_t tenha a precisão especificada. Isso é crucial para manter a exatidão e a precisão dos cálculos, especialmente em operações que envolvem números grandes e precisam de alta precisão para evitar erros de arredondamento.
 
+---
 
 ### • *mpfr_set_ui*
 
 FALTA: (tem que falar o que faz, quais os parametros e falar que o motivo que foi usado é porque precisa que a variavel comece com um valor e que o valor seria grande o suficiente para talvez uma variavel do tipo inteiro assinado)
+
+---
 
 ### • *mpfr_mul_ui*
 realiza a multiplicação de um número de ponto flutuante de precisão arbitrária por um inteiro sem sinal, foi utilizada para garantir que o numero do fatorial fosse atingível
@@ -129,6 +134,8 @@ A função mpfr_mul_ui multiplica um número de ponto flutuante por um inteiro n
 
 A linha mpfr_mul_ui(f, f, i, MPFR_RNDU); multiplica a variável de alta precisão f pelo inteiro i, armazenando o resultado de volta em f. A operação usa o modo de arredondamento MPFR_RNDU para garantir que o resultado seja arredondado para cima.
 
+---
+
 ### • *mpfr_div*
 
   é a função que é utilizada para dividir dois números de precisão arbitrária
@@ -150,6 +157,8 @@ Durante a operação, a função utiliza uma técnica que envolve a análise dos
 
 Aqui mpfr_add(*result, *result, my_result, MPFR_RNDU); soma o valor parcial calculado pela thread (my_result) ao valor acumulado atual (*result) e armazena o resultado novamente em *result. O modo de arredondamento MPFR_RNDU é usado para garantir que o resultado seja arredondado para cima.
 
+---
+
 ### • *mpfr_add* 
 
 utilizada para realizar a adição de dois números de ponto flutuante com precisão arbitrária
@@ -170,14 +179,19 @@ Este algoritmo simplifica a adição de números de precisão arbitrária, trata
 
 na imagem mpfr_add soma duas variáveis de alta precisão: *result, que contém o valor acumulado atual, e my_result, que é o resultado parcial calculado pela thread. O resultado da soma é armazenado em *result, utilizando o modo de arredondamento MPFR_RNDU para arredondar o resultado para cima. Esta linha assegura que cada thread possa atualizar *result mais precisamente
 
+---
 
 ### • *mpfr_clear*
 
 FALTA: (tem que falar o que faz)
 
+---
+
 ### • *mpfr_out_str* 
 
 FALTA: (tem que falar o que faz e explicar os parametros)
+
+---
 
 Fontes: 
 

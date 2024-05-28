@@ -148,6 +148,21 @@ FALTA: (tem que falar o que faz, quais os parametros e falar que o motivo que fo
 
 ### • *mpfr_add* 
 
+	utilizada para realizar a adição de dois números de ponto flutuante com precisão arbitrária
+	⁠void mpfr_add(mpfr_t rop, mpfr_t op1, mpfr_t op2, mpfr_rnd_t rounding_mode);
+1.⁠ ⁠mpfr_t rop: Este é o parâmetro de saída, onde o resultado da adição será armazenado, sendo do tipo mpfr_t.
+2.⁠ ⁠mpfr_t op1: Este é o primeiro parâmetro de entrada para a adição, sendo do tipo mpfr_t
+3.⁠ ⁠mpfr_t op2: Este é o segundo parâmetro de entrada para a adição, sendo do tipo mpfr_t
+4.⁠ ⁠mpfr_rnd_t rounding_mode: Este parâmetro especifica o modo de arredondamento a ser usado na operação de adição. No caso usado o MPFR_RNDU (arredondamento para cima)
+
+#### algoritmo
+
+Ele começa calculando a diferença entre os expoentes dos números, garantindo que ambos tenham o mesmo sinal. Em seguida, os números são divididos em partes, com a parte mais significativa de cada número sendo adicionada primeiro considerando a diferença de expoentes. Em seguida, é calculado o carry (vai-um) resultante da adição das partes menos significativas dos números. Esse carry é então adicionado ao resultado final, garantindo precisão e arredondamento corretos durante toda a operação. 
+Este algoritmo simplifica a adição de números de precisão arbitrária, tratando separadamente as partes mais e menos significativas, enquanto preserva o arredondamento correto.
+
+
+
+
 ### • *mpfr_clear*
 
 FALTA: (tem que falar o que faz)

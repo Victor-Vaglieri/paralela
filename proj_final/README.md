@@ -108,6 +108,38 @@ Essas chamadas são usadas para garantir que as variáveis my_result, resu_div, 
 
 FALTA: (tem que falar o que faz, como faz para guardar a variavel, quais os parametros e falar que o motivo que foi usado é porque precisa que a variavel tenha aquela precisão especifica)
 
+#### A função mpfr_init2 é usada para inicializar uma variável do tipo mpfr_t com uma precisão específica a baixo a sintaxe 
+
+-------------
+
+<img width="465" alt="Captura de Tela 2024-05-27 às 22 49 33" src="https://github.com/Victor-Vaglieri/paralela/assets/72163013/2024d4cc-c215-4ea2-beea-309bf1a4c230">
+
+--------------
+
+parametros
+
+x: A variável do tipo mpfr_t que será inicializada.
+prec: A precisão, em bits, que será atribuída à variável mpfr_t.
+
+#### exemplos no codigo
+
+A função mpfr_init2 inicializa a variável mpfr_t x com uma precisão de prec bits. Isso significa que todas as operações realizadas com essa variável manterão a precisão especificada, garantindo cálculos de alta precisão.
+
+
+No código fornecido, mpfr_init2 é usado para inicializar várias variáveis mpfr_t com a precisão definida pela constante PRECISAO. Por exemplo:
+
+---------
+
+<img width="465" alt="image" src="https://github.com/Victor-Vaglieri/paralela/assets/72163013/d83ccbfe-3027-4814-8aeb-97ec3b029489">
+
+---------
+
+Aqui, cada variável mpfr_t (my_result, resu_div, um, e f) é inicializada com uma precisão de PRECISAO bits.mpfr_init2 é chamado várias vezes para inicializar variáveis antes de realizar cálculos.Cada uma dessas chamadas é usada para garantir que as variáveis estejam preparadas para realizar cálculos de alta precisão com a precisão especificada por PRECISAO
+
+A razão para usar mpfr_init2 no código é porque é necessário garantir que cada variável mpfr_t tenha a precisão especificada. Isso é crucial para manter a exatidão e a precisão dos cálculos, especialmente em operações que envolvem números grandes e precisam de alta precisão para evitar erros de arredondamento.
+
+
+
 ### • *mpfr_set_ui*
 
 FALTA: (tem que falar o que faz, quais os parametros e falar que o motivo que foi usado é porque precisa que a variavel comece com um valor e que o valor seria grande o suficiente para talvez uma variavel do tipo inteiro assinado)

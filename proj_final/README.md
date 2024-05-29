@@ -260,6 +260,14 @@ Fontes:
 
 ---
 
+### Conclusão:
+
+A versão final do projeto representa um avanço significativo na eficiência e precisão nos cálculos envolvidos. O uso das bibliotecas MPFR e GMP, permitiu alcançar resultados mais precisos e em um tempo de execução aceitável. Tanto a melhoria da nossa lógica matemática acerca dos cálculos envolvidos no problema quanto a melhoria técnica de precisão e casas decimais é mostrada na evolução entre as diferentes versões, se demonstrando uma versão muito mais otimizada.
+A evolução do projeto demonstra a aplicação prática dos conceitos teóricos de computação pararela, provando que o uso de técnicas paralelas aprimoram muito o desempenho de códigos envolvendo grandes volumes de cálculos numéricos, contribuindo para a solução do problema.
+
+
+---
+
 > [!IMPORTANT]
 > processador usado: *AMD Ryzen 5 1600 six-core*
 > 

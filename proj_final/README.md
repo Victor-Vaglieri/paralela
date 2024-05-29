@@ -109,7 +109,6 @@ A razão para usar mpfr_init2 no código é porque é necessário garantir que c
 
 ### • *mpfr_set_ui*
 
-FALTA: (tem que falar o que faz, quais os parametros e falar que o motivo que foi usado é porque precisa que a variavel comece com um valor e que o valor seria grande o suficiente para talvez uma variavel do tipo inteiro assinado)
 É usada para atribuir um valor inteiro sem sinal a uma variável do tipo mpfr_t.
 	void mpfr_set_ui (mpfr_t rop, unsigned long int op, mpfr_rnd_t rounding_mode)
 1. mpfr_t rop: A variável do tipo mpfr_t que será atribuida o valor
@@ -118,7 +117,7 @@ FALTA: (tem que falar o que faz, quais os parametros e falar que o motivo que fo
 
 #### Utilização no código
 
-mpfr_set_ui(result_fat, 1.0, MPFR_RNDU);
+mpfr_set_ui(result_fat, 1.0, MPFR_RNDU); 
 O valor 1.0 é atribuido à variável result_fat do tipo mpfr_t utilizando o metodo de arredondamento MPFR_RNDU(arrendondamento para cima)
 ---
 

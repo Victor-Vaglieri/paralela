@@ -121,6 +121,16 @@ FALTA: (tem que falar o que faz, quais os parametros e falar que o motivo que fo
 mpfr_set_ui(result_fat, 1.0, MPFR_RNDU);
 O valor 1.0 é atribuido à variável result_fat do tipo mpfr_t utilizando o metodo de arredondamento MPFR_RNDU(arrendondamento para cima)
 ---
+nomuretz
+
+░░░░╔═══╗░░░░░░║░░
+░░▄═╝█║░║══════╣░░
+░░║═░░╚═╝░░░░░░║░░
+░░╚═════╗╗╔══╗╗║░░
+░░░░░░░░╚╚╝░░╚╚╝░░
+
+
+             
 
 ### • *mpfr_mul_ui*
 realiza a multiplicação de um número de ponto flutuante de precisão arbitrária por um inteiro sem sinal, foi utilizada para garantir que o numero do fatorial fosse atingível

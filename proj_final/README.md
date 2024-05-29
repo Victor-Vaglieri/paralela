@@ -197,7 +197,21 @@ na imagem mpfr_add soma duas variáveis de alta precisão: *result, que contém 
 
 ### • *mpfr_clear*
 
-FALTA: (tem que falar o que faz)
+Função que libera a memória que havia sido alocada para uma variável do tipo mpfr_t
+
+void mpfr_clear(mpfr_t x);
+
+Recebe um parâmetro, como x, que é a variável cuja memória alocada vai ser liberada
+
+#### Utilização no código
+
+mpfr_clear(resu_div);
+
+mpfr_clear(my_result);
+
+mpfr_clear(um);
+
+Liberação da memória de variáveis usadas ao longo do código
 
 ---
 

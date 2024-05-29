@@ -118,7 +118,9 @@ A razão para usar mpfr_init2 no código é porque é necessário garantir que c
 #### Utilização no código
 
 mpfr_set_ui(result_fat, 1.0, MPFR_RNDU); 
+
 O valor 1.0 é atribuido à variável result_fat do tipo mpfr_t utilizando o metodo de arredondamento MPFR_RNDU(arrendondamento para cima)
+
 ---
 
 

@@ -217,7 +217,18 @@ Liberação da memória de variáveis usadas ao longo do código
 
 ### • *mpfr_out_str* 
 
-FALTA: (tem que falar o que faz e explicar os parametros)
+Função converte um número representado por uma variável do tipo mpfr_t em uma string formatada e escrevê-la em um buffer de caracteres.
+size_t mpfr_out_str(FILE *stream, int base, size_t n_digits, mpfr_t op, mpfr_rnd_t rounding_mode);
+1. FILE *stream: Ponteiro para o arquivo que será escrito a string
+2. int base: Base numérica que o número será convertido
+3. size_t n_digits: Número máximo de digitos significativos a serem impressos na saída, se o número passado possuir mais digitos que o máximo passado, será arrendondado
+4. mpfr_t op: Variável contendo o número que será convertido
+5. mpfr_rnd_t rounding_mode: Método de arredondamento que será utilizado na conversão
+
+#### Utilização no código
+
+mpfr_out_str(stdout, 10, 0, result, MPFR_RNDU);
+Quando é passado stdout no primeiro argumento, a string é impressa no console. 10 é a base decimal da conversão. 0 como terceiro argumento faz com que todos os digitos significativos da variável sejam impressos. result é a variável do tipo mpfr_t que guarda o número a ser convertido. MPFR_RNDU é o método de arredondamento(para cima). 
 
 ---
 
